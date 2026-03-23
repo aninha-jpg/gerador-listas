@@ -4,7 +4,7 @@ let quantidade = document.getElementById('quantidadePessoas');
 let botao = document.getElementById('incluir');
 
 const hoje = new Date();
-const dia = hoje.getDate().toString().padStart(2,'0');
+const dia = (hoje.getDate() + 1).toString().padStart(2,'0');
 const mes = String(hoje.getMonth() + 1).padStart(2,'0');
 const ano = hoje.getFullYear();
 const dataAtual = `${dia} / ${mes} / ${ano}`;

@@ -6,7 +6,7 @@ let botao = document.getElementById('incluir');
 let lancheEspecial = document.getElementById('lancheEspecial');
 
 const hoje = new Date();
-const dia = hoje.getDate().toString().padStart(2,'0');
+const dia = (hoje.getDate() + 1).toString().padStart(2,'0');
 const mes = String(hoje.getMonth() + 1).padStart(2,'0');
 const ano = hoje.getFullYear();
 const dataAtual = `${dia} / ${mes} / ${ano}`;
@@ -40,7 +40,7 @@ function incluirViagem() {
     let texto = `*Viagens ${dataAtual} Disponível* \n\n`;
     for(let i = 0; i < viagens.length; i++){
         let v = viagens[i];
-        texto += `${v.nomeCidade}: ${v.motoristaInput}/${v.carroInput} sai às ${v.hora}. ${v.localLanche}\n\n`;
+        texto += `${v.nomeCidade}: ${v.carroInput}/${v.motoristaInput} sai às ${v.hora}. ${v.localLanche}\n\n`;
     }
     textoSaida.textContent = texto;
 

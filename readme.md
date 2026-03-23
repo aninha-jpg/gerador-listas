@@ -1,6 +1,6 @@
 # 🚙 Gerador de Listas
 
-Este projeto é um *formulário web* para controlar viagens, horários e lanches para transporte de pessoas, partiu de um problema real que tenho no meu serviço atual, sendo cansativo todo dia fazer a mão essas listas.  
+Este projeto é um *formulário web* para listas de viagens, horários e lanches para transporte de pessoas, partiu de um problema real que tenho no meu serviço atual, sendo cansativo todo dia fazer a mão essas listas.  
 
 
 ![Texto alternativo](image/print.png)   
@@ -38,5 +38,9 @@ Este projeto é um *formulário web* para controlar viagens, horários e lanches
 * HTML5
 * CSS3 (com variáveis e mobile-first)
 * JavaScript (ES6+)
+
+## ✨ Melhorias Futuras
+
+Adicionarei um banco de dados para armazenar o valor total dos lanches e somar tudo ao fim do mês, pois necessitamos de um relatório.
 
 
