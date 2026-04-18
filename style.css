@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 :root {
-    --cor1: #41494D;
-    --cor2: #547B8C;
-    --cor3: #B3E8FF;
-    --cor4: #25BCFE;
+    --cor1: #F9B17A;
+    --cor2: #2D3250;
+    --cor3: #424769;
+    --cor4: #676F9D;
 }
 
 * {
@@ -15,9 +15,14 @@
 
 body {
     max-width: 100%;
+    background-color: var(--cor2);
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
     color: white;
     padding: 10px;
     text-align: center;
@@ -25,18 +30,26 @@ header {
     font-size: 20px;
 }
 
+header > h1 {
+    align-items:end;
+}
+
 nav > a {
     text-decoration: none;
-    color: var(--cor1);
+    color: var(--cor4);
     padding: 5px;
-    border-radius: 10px;
     transition: 0.3s;
+    list-style: none;
+    gap: 20px;
+    text-decoration: none;
+    padding-bottom: 5px; 
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
 }
 
 nav > a:hover{
-    color: var(--cor3);
-    background-color: var(--cor1);
-    border-radius: 10px;
+    color: var(--cor1);
+    border-bottom: 2px solid var(--cor1);
 }
 
 main {
@@ -64,9 +77,15 @@ input {
     height: auto;
     font-size: 12px;
     padding: 5px;
-    border: 1px solid var(--cor1);
+    border: none;
+    background-color: var(--cor2);
+    color: white;
     border-radius: 8px;
     margin-bottom: 5px;
+}
+
+input:focus, textarea:focus, select:focus, button:focus {
+    outline: none;
 }
 
 .checkbox-container {
@@ -75,34 +94,42 @@ input {
     justify-content: center;
     margin-bottom: 10px;
     font-size: 26px;
-    color: var(--cor1);
+    color: white;
 }
 
 .checkbox-container input[type="checkbox"] {
     width: 15px;
     height: 15px;
     margin: 0;
+    accent-color: var(--cor1);
+    color: var(--cor1);
 }
-
 
 button#incluir {
     display: flex;
-    margin: 10px auto; 
-    text-align: center;
     align-items: center;
     justify-content: center;
-    height: 30px;
-    width: 100px;
-    margin: 0 auto;
-    font-size: 8px;
-    border-radius: 15px;
-    border: 1px solid var(--cor2);
-    background-color: var(--cor3);
+    width: 110px;
+    height: 35px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--cor1);
+    color: white;
+    box-shadow: 0 2px 4px var(--cor4);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-button#incluir:hover{
+button#incluir:hover {
     background-color: var(--cor2);
-    transition: 0.3s;
+    color: var(--cor1);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 3px var(--cor1);
+}
+
+button#incluir:active {
+    transform: translateY(0);
 }
 
 .textoSaida {
@@ -111,7 +138,7 @@ button#incluir:hover{
     max-width: 100%;
     margin: auto;
     margin-top: 10px;
-    border: 1px solid var(--cor1);
+    border: 1px solid var(--cor2);
     background-color: var(--cor3);
     border-radius: 8px;
     color: var(--cor1);
