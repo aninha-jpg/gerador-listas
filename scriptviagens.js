@@ -5,10 +5,13 @@ let carro = document.getElementById('carro');
 let botao = document.getElementById('incluir');
 let lancheEspecial = document.getElementById('lancheEspecial');
 
-const hoje = new Date();
-const dia = (hoje.getDate() + 1).toString().padStart(2,'0');
-const mes = String(hoje.getMonth() + 1).padStart(2,'0');
-const ano = hoje.getFullYear();
+
+const amanha = new Date();
+
+amanha.setDate(amanha.getDate() +1);
+const dia = amanha.getDate().toString().padStart(2,'0');
+const mes = String(amanha.getMonth() + 1).padStart(2,'0');
+const ano = amanha.getFullYear();
 const dataAtual = `${dia} / ${mes} / ${ano}`;
 // armazeno num array para posteriormente mostrar na tela com o appendChild
 const viagens = [];
